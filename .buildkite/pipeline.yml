@@ -1,0 +1,20 @@
+steps:
+  - label: "build collector layer"
+    commands:
+      - cd collector
+      - make pakage
+      - du -hs build/collector-extension.zip
+    artifact_paths: "build/collector-extension.zip"
+    plugins:
+      - docker#v3.9.0:
+          image: "golang:1.18-alpine"
+
+  - label: "build wrapper layer"
+    commands:
+      - cd nodejs
+      - npm install
+      - du -hs packages/layer/layer.zip
+    artifact_paths: "packages/layer/layer.zip"
+    plugins:
+      - docker#v3.9.0:
+          image: "node:16"
