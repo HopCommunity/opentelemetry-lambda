@@ -2,7 +2,7 @@ steps:
   - label: "build collector layer"
     commands:
       - cd collector
-      - yum install -y zip
+      - apt install -y zip
       - make package
     artifact_paths: "build/collector-extension.zip"
     plugins:
