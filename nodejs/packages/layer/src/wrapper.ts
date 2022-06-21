@@ -26,17 +26,9 @@ import { AwsLambdaInstrumentationConfig } from '@opentelemetry/instrumentation-a
 const { AwsLambdaInstrumentation } = require('@opentelemetry/instrumentation-aws-lambda');
 const { DnsInstrumentation } = require('@opentelemetry/instrumentation-dns');
 const { ExpressInstrumentation } = require('@opentelemetry/instrumentation-express');
-const { GraphQLInstrumentation } = require('@opentelemetry/instrumentation-graphql');
 const { GrpcInstrumentation } = require('@opentelemetry/instrumentation-grpc');
-const { HapiInstrumentation } = require('@opentelemetry/instrumentation-hapi');
-const { HttpInstrumentation } = require('@opentelemetry/instrumentation-http');
-const { IORedisInstrumentation } = require('@opentelemetry/instrumentation-ioredis');
-const { KoaInstrumentation } = require('@opentelemetry/instrumentation-koa');
-const { MongoDBInstrumentation } = require('@opentelemetry/instrumentation-mongodb');
-const { MySQLInstrumentation } = require('@opentelemetry/instrumentation-mysql');
+const { HttpInstrumentation } = require('@opentelemetry/instrumentation-http')
 const { NetInstrumentation } = require('@opentelemetry/instrumentation-net');
-const { PgInstrumentation } = require('@opentelemetry/instrumentation-pg');
-const { RedisInstrumentation } = require('@opentelemetry/instrumentation-redis');
 import { OTLPTraceExporter } from '@opentelemetry/exporter-trace-otlp-proto';
 
 declare global {
@@ -58,17 +50,9 @@ const instrumentations = [
   new AwsLambdaInstrumentation(typeof configureLambdaInstrumentation === 'function' ? configureLambdaInstrumentation({}) : {}),
   new DnsInstrumentation(),
   new ExpressInstrumentation(),
-  new GraphQLInstrumentation(),
   new GrpcInstrumentation(),
-  new HapiInstrumentation(),
   new HttpInstrumentation(),
-  new IORedisInstrumentation(),
-  new KoaInstrumentation(),
-  new MongoDBInstrumentation(),
-  new MySQLInstrumentation(),
   new NetInstrumentation(),
-  new PgInstrumentation(),
-  new RedisInstrumentation(),
 ];
 
 // configure lambda logging
