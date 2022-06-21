@@ -27,7 +27,7 @@ const { AwsLambdaInstrumentation } = require('@opentelemetry/instrumentation-aws
 const { DnsInstrumentation } = require('@opentelemetry/instrumentation-dns');
 const { ExpressInstrumentation } = require('@opentelemetry/instrumentation-express');
 const { GrpcInstrumentation } = require('@opentelemetry/instrumentation-grpc');
-const { HttpInstrumentation } = require('@opentelemetry/instrumentation-http')
+const { HttpInstrumentation } = require('@opentelemetry/instrumentation-http');
 const { NetInstrumentation } = require('@opentelemetry/instrumentation-net');
 import { OTLPTraceExporter } from '@opentelemetry/exporter-trace-otlp-proto';
 
