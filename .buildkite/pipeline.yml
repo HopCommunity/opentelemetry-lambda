@@ -2,7 +2,7 @@ steps:
   - label: "build collector layer"
     commands:
       - cd collector
-      - make pakage
+      - make package
     artifact_paths: "collector/build/collector-extension.zip"
     plugins:
       - docker#v3.9.0:
