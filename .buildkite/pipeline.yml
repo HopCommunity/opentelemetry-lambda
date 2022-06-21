@@ -4,7 +4,7 @@ steps:
       - cd collector
       - apt update; apt install -y zip
       - make package
-    artifact_paths: "build/collector-extension.zip"
+    artifact_paths: "collector/build/collector-extension.zip"
     plugins:
       - docker#v3.9.0:
           image: "golang:1.18-bullseye"
@@ -13,7 +13,7 @@ steps:
     commands:
       - cd nodejs
       - npm install
-    artifact_paths: "packages/layer/layer.zip"
+    artifact_paths: "nodejs/packages/layer/layer.zip"
     plugins:
       - docker#v3.9.0:
           image: "node:16"
