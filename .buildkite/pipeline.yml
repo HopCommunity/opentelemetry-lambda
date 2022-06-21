@@ -3,7 +3,6 @@ steps:
     commands:
       - cd collector
       - make pakage
-      - du -hs build/collector-extension.zip
     artifact_paths: "collector/build/collector-extension.zip"
     plugins:
       - docker#v3.9.0:
@@ -13,7 +12,6 @@ steps:
     commands:
       - cd nodejs
       - npm install
-      - du -hs packages/layer/layer.zip
     artifact_paths: "nodejs/packages/layer/layer.zip"
     plugins:
       - docker#v3.9.0:
