@@ -13,7 +13,7 @@ steps:
     commands:
       - cd nodejs
       - npm install
-    artifact_paths: "nodejs/packages/layer/layer.zip"
+    artifact_paths: "nodejs/packages/layer/build/layer.zip"
     plugins:
       - docker#v3.9.0:
           image: "node:16"
